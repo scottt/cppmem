@@ -68,6 +68,7 @@ let terminalmode = ref VT220
 
 let the_model_name = ref Atomic.default_model_name
 let the_model = ref (List.assoc !the_model_name Atomic.the_models)
+let the_models = String.concat ", " (List.map fst Atomic.the_models)
 
 
 let options = Arg.align [
@@ -100,7 +101,6 @@ let options = Arg.align [
         | None -> Auxl.error ("Error: stopat arg must be one of never,always,on_candidates,on_solutions") in
       stop_at := new_stop_at), 
     "<mode>            Stopping mode (one of never,always,on_candidates,on_solutions) (default <"^pp_stop_at !stop_at^">)");
-  let the_models = String.concat ", " (List.map fst Atomic.the_models) in
   ( "-model",
     Arg.String (fun s ->
       try
