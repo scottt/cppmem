@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd cppmem
+make clean
+find . -name .svn -exec rm -rf '{}' ';'
