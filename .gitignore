@@ -1,3 +1,16 @@
+out.dot
+out.pdf
+
+bin/
+cppmem
+js_of_ocaml-1.2/compiler/js_of_ocaml
+js_of_ocaml-1.2/lib/dlljs_of_ocaml.so
+js_of_ocaml-1.2/lib/stubs.c
+js_of_ocaml-1.2/local-install/
+js_of_ocaml-1.2/runtime/runtime.js
+web/cppmem.js
+cgi/dot.cgi
+
 *.annot
 *.cmo
 *.cma
